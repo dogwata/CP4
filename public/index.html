@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Mario Kart!</title>
+    <meta content="">
+    <style></style>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="app">
+      <center>
+        <img src="https://i.imgur.com/3eYcjPs.png">
+        <br>
+        <br>
+      <h1 >Who will be the fastest? </h1>
+        <br>
+      Racecourse: <input type="text" v-model="partyName">
+        <button v-on:click="sendName()">Save</button>
+        <br>
+        <br>
+        <img src="https://i.imgur.com/xSFtHuT.png">
+      <p>Add a Racer!</p>
+      <form v-on:submit.prevent="addCharacter">
+
+       	Username:<input type="text" id="name" v-model="newName">
+        Weight:<select v-model="newWeight">
+                <option value="feather">Toad / Koopa / Lakitu / Shy Guy</option>
+                <option value="light">Peach / Daisy / Yoshi</option>
+                <option value="medium">Mario / Luigi / Mii</option>
+                <option value="cruiser">Donkey Kong / Rosalina / Wiggler</option>
+                <option value="heavy">Bowser / Wario / Metal Mario / H. Queen</option>
+              </select>
+        Kart:<select v-model="newKart">
+                <option value="bdasher">BDasher</option>
+                <option value="btrain">Barrel Train</option>
+                <option value="kclown">Koopa Clown</option>
+                <option value="egg">Egg</option>
+                <option value="standardk">Standard Kart</option>
+              </select>
+        Wheel:<select v-model="newWheel">
+                <option value="monster">Monster</option>
+                <option value="slick">Slick</option>
+                <option value="kclown">Sponge</option>
+                <option value="egg">Wood</option>
+                <option value="standardw">Standard Wheel</option>
+              </select>
+
+       	<button type="submit">Add</button>
+        &nbsp {{error}}
+      </form>
+      <br>
+      <button v-on:click="getSpeed()">Speed</button>
+    </center>
+
+
+      <h2 class="centered-h2">Racers of {{getPartyName}}: {{size}}
+        <button v-on:click="clearParty()">Clear</button></h2>
+
+      <div class="table">
+        <ul>
+          <li v-for="character in party">
+            {{character.name}}
+            <ul>
+              <li>Weight: {{character.weight}}</li>
+              <li>Kart: {{character.kart}}</li>
+              <li>Wheel: {{character.wheel}}</li>
+              <li>Speed: {{newSpeed}}</li>
+            </ul>
+            <button v-on:click="removeCharacter(character)">Remove</button>
+            <br>
+            <br>
+          </li>
+
+
+        </ul>
+      </div>
+      </div>
+      <center><img src="https://i.imgur.com/iKndnz8.png"></center>
+    <footer>
+      <a href="https://github.com/dogwata" target="_blank">GitHub</a>
+    </footer>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+   <script src="script.js"></script>
+   <script src="constants.js"></script>
+  </body>
+</html>

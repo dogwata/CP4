@@ -1,0 +1,123 @@
+
+.table{
+  display: table;
+  margin: 0 auto;
+}
+
+.centered-h2{
+  text-align: center;
+}
+
+body {
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: rgb(153, 204, 255, 0.2);
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(153, 204, 255, 0.4);
+  padding: 5px 0px;
+  margin: 0;
+}
+
+/* Text Input Box */
+
+p {
+  text-align: center;
+}
+
+#app {
+  text-align: center;
+}
+
+/*img {
+  width: 30%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+}*/
+
+button {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+textarea {
+  height: 200px;
+  width: 500px;
+}
+
+picarea {
+  height: 100px;
+  width: 200px;
+}
+
+/* List */
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #fff;
+    min-height: 30px;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.delete {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+label {
+    width: 610px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text] {
+    font-size: 1em;
+}
+
+input[type=image] {
+    font-size: 1em;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
